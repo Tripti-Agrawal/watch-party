@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: watch-party
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: MONGODB_URI
+        sync: false   # paste your MongoDB Atlas connection string in the Render dashboard
+      - key: NODE_VERSION
+        value: 20
