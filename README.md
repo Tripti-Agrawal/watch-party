@@ -2,7 +2,7 @@
 
 Real-time YouTube Watch Party built with React, Node.js, Express, Socket.IO, MongoDB and the YouTube IFrame API.
 
-**Live URL:** `https://YOUR-APP.onrender.com` — replace this after deployment.
+**Live URL:** `https://watch-party-rhzq.onrender.com`
 
 ## What is implemented
 - Publicly deployable single-service architecture: Express serves the Vite production build.
@@ -21,6 +21,8 @@ Real-time YouTube Watch Party built with React, Node.js, Express, Socket.IO, Mon
 ## Run locally
 
 Requires Node 18+ and MongoDB (local MongoDB or MongoDB Atlas).
+
+###Install dependencies
 
 ```bash
 npm install
@@ -74,16 +76,12 @@ Environment variables on Render:
 ```text
 MONGODB_URI=<MongoDB Atlas connection string>
 JWT_SECRET=<long random secret>
-CLIENT_ORIGIN=<your Render URL>
+CLIENT_ORIGIN=https://watch-party-rhzq.onrender.com
 ```
 
-After deployment, verify:
+After deployment, verify the health endpoint:
 
-```text
-https://YOUR-APP.onrender.com/health
-```
-
-Then replace the placeholder Live URL above with the real Render URL and commit the README change.
+https://watch-party-rhzq.onrender.com/health
 
 ## Architecture
 
